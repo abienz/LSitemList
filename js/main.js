@@ -30,16 +30,13 @@ var Main = {
 			clicked_link = $(e.target);
 			item_id = clicked_link.data('item-id');
 			
-			console.log(e.target);
-
 			self.item_list.find('a').removeClass('active');
 			clicked_link.addClass('active');
-			Livestax.store.set('getitem', item_id);
+			Livestax.store.set('item_id', item_id);
 		});
 	}
 }
 
 $(function(){
-	console.log('page loaded');
 	Main.init();
 });
